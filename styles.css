@@ -1,0 +1,314 @@
+:root {
+    --bg-gradient-start: #1e0d2d;
+    --bg-gradient-end: #321450;
+    --nav-bg: rgba(255, 255, 255, 0.05);
+    --nav-border: rgba(255, 255, 255, 0.1);
+    --button-gradient: linear-gradient(90deg, #6b3bce 0%, #9b6dff 100%);
+    --text-primary: #ffffff;
+    --text-secondary: rgba(255, 255, 255, 0.8);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+body {
+    background: linear-gradient(to right, #17093b, #110925);
+    color: var(--text-primary);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 2rem;
+    border-left: 1px solid rgb(135, 31, 221);
+    border-right: 1px solid rgb(135, 31, 221);
+}
+
+/* Navigation */
+.glass-nav {
+    position: fixed;
+    top: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 685px;
+    z-index: 1000;
+}
+
+.nav-container {
+    background: var(--nav-bg);
+    backdrop-filter: blur(8.5px);
+    border: 1px solid var(--nav-border);
+    border-radius: 50px;
+    padding: 0.7rem 2rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 30px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    background: linear-gradient(90deg, #fff, #f0f0f0);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.logo img {
+    height: 20px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 8rem;
+}
+.nav-links a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+.nav-links a:hover {
+    color: var(--text-primary);
+}
+
+/* Hero Section */
+.hero-section {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 8rem;
+    margin-block: 7rem;
+    background: url("landing-three.png") no-repeat center;
+    background-size: 1200px;
+    min-height: 100vh;
+}
+.hero-content {
+    padding-top: 4rem;
+}
+.hero-content h1 {
+    font-size: 5rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 2rem;
+    letter-spacing: -0.02em;
+}
+.hero-content p {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    margin-bottom: 2.5rem;
+    max-width: 500px;
+}
+
+.button {
+    padding: 10px 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #520ed1;
+    border: 2px solid #000;
+    border-radius: 10px;
+    box-shadow: 5px 5px 0px #b90d86;
+    transition: 0.3s;
+    height: 70px;
+    width: 300px;
+    cursor: pointer;
+}
+
+/* Phone Section */
+.phone-section img {
+    width: 600px;
+    height: 620px;
+}
+
+/* Content Section */
+.content-section {
+    text-align: center;
+    margin-top: 88px;
+}
+.content-section .main-heading,
+.content-section .sub-heading {
+    font-family: 'Grotesk', sans-serif;
+    color: grey;
+}
+.main-heading {
+    font-size: 2.25rem;
+    margin-bottom: 0.5rem;
+}
+.sub-heading {
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+/* Footer */
+.footer {
+    background-color: #592ebf;
+    color: white;
+    padding: 40px 20px;
+    height: 620px;
+}
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 50px 150px 0;
+}
+.footer-section {
+    flex: 1 1 30%;
+    margin: 20px;
+}
+.footer-section.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.footer-logo {
+    width: 60px;
+}
+.footer-section h2 {
+    font-size: 24px;
+    font-family: 'Courier New', Courier, monospace;
+}
+.footer-section p,
+ul {
+    margin: 5px 0;
+    font-size: 0.9rem;
+}
+ul {
+    list-style: none;
+    padding: 0;
+}
+ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: large;
+    display: block;
+    padding-top: 20px;
+}
+ul li a:hover {
+    text-decoration: underline;
+}
+.social-icons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
+}
+.social-icons img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Creator Section */
+.creator-section {
+    background: linear-gradient(to right, #17093b, #110925);
+    padding: 60px 0;
+}
+.creator-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+.creator-card {
+    border-radius: 40px;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgb(66, 65, 65);
+    width: 350px;
+}
+.creator-image {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 4px solid white;
+    margin-right: 15px;
+}
+.creator-info h3 {
+    color: #fff;
+    font-size: 30px;
+    font-weight: 500;
+}
+.creator-info p {
+    color: #4a9eff;
+    font-size: 20px;
+}
+
+/* CTA Section */
+.cta-section {
+    text-align: center;
+    max-width: 600px;
+    margin: 60px auto 0;
+}
+.cta-section h2 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.cta-section p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+.cta-input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.country-code {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+.flag-icon {
+    width: 24px;
+    height: 16px;
+    margin-right: 5px;
+}
+.cta-button {
+    background-color: #520ed1;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    padding: 15px 30px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+    }
+    .creator-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    .creator-card {
+        width: 90%;
+    }
+    .cta-input {
+        flex-direction: column;
+    }
+    .country-code {
+        margin: 0 0 10px;
+        width: 100%;
+        justify-content: center;
+    }
+}
