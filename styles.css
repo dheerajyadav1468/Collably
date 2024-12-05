@@ -123,10 +123,32 @@ body {
 }
 
 /* Phone Section */
-.phone-section img {
-    width: 600px;
-    height: 620px;
+.phone-section {
+    position: relative;
+    width: 600px; /* Matches the image width */
+    height: 620px; /* Matches the image height */
 }
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 46%; /* Fills the container width */
+    height: 90%; /* Fills the container height */
+    object-fit:fill; /* Ensures the video scales properly */
+    z-index: 1; /* Places the video behind the image */
+    top: 4%;
+    left: 26%;
+}
+
+.phone-section img {
+    position: relative;
+    z-index: 2; /* Ensures the image is on top of the video */
+    width: 600px; /* Matches the container width */
+    height: 620px; /* Matches the container height */
+    object-fit: cover;
+}
+
 
 /* Content Section */
 .content-section {
@@ -312,3 +334,94 @@ ul li a:hover {
         justify-content: center;
     }
 }
+
+/* Section Wrapper */
+.section-wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 1000px;
+    background-color: #1c1c1c;
+    background: linear-gradient(to right, #11062e, #740b66);
+  }
+  
+  /* Heading Text */
+  .text-heading {
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    transform: translate(-50%, -50%);
+    font-family: "Arial", sans-serif;
+    font-size: 4rem;
+    font-weight: 900;
+    color: #ffffff; 
+    text-align: center;
+    z-index: 10;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); 
+  }
+  
+  @media (min-width: 768px) {
+    .text-heading {
+      font-size: 3rem; 
+    }
+  }
+  
+  /* Subheading Wrapper */
+  .text-subheading {
+    position: absolute;
+    left: 50%;
+    top: 85%;
+    transform: translate(-50%, -80%);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    width: 100%;
+    z-index: 10;
+    text-align: center;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  }
+  
+  @media (min-width: 768px) {
+    .text-subheading {
+      font-size: 3rem;
+    }
+  }
+  
+  /* Scroller Wrapper */
+  .scroller {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 40px; 
+  }
+  
+  /* Brand List */
+  .brand-list {
+    display: flex;
+    gap: 3rem; 
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    transition: transform 0.1s linear;
+  }
+  
+  /* Brand Logo */
+  .brand-logo {
+    width: 200px;
+    height: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  @media (min-width: 768px) {
+    .brand-logo {
+      width: 300px; 
+    }
+  }
+  
+  .brand-logo:hover {
+    transform: scale(1.15); 
+  }
+  

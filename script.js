@@ -24,3 +24,24 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const brandList = document.querySelector(".brand-list");
+    const scroller = document.querySelector(".scroller");
+    
+   
+    brandList.innerHTML += brandList.innerHTML;
+    let scrollPosition = 0;
+  
+    function moveLogos() {
+      scrollPosition -= 1; 
+      if (Math.abs(scrollPosition) >= brandList.scrollWidth / 2) {
+        scrollPosition = 0;
+      }
+      brandList.style.transform = `translateX(${scrollPosition}px)`;
+      requestAnimationFrame(moveLogos);
+    }
+  
+    moveLogos(); 
+  });
+  
