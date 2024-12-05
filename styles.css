@@ -85,7 +85,7 @@ body {
     justify-content: space-around;
     padding-top: 8rem;
     margin-block: 7rem;
-    background: url("landing-three.png") no-repeat center;
+    background: url("images/landing-three.png") no-repeat center;
     background-size: 1200px;
     min-height: 100vh;
 }
@@ -125,27 +125,27 @@ body {
 /* Phone Section */
 .phone-section {
     position: relative;
-    width: 600px; /* Matches the image width */
-    height: 620px; /* Matches the image height */
+    width: 600px; 
+    height: 620px;
 }
 
 .background-video {
     position: absolute;
     top: 0;
     left: 0;
-    width: 46%; /* Fills the container width */
-    height: 90%; /* Fills the container height */
-    object-fit:fill; /* Ensures the video scales properly */
-    z-index: 1; /* Places the video behind the image */
+    width: 46%; 
+    height: 90%; 
+    object-fit:fill; 
+    z-index: 1;
     top: 4%;
     left: 26%;
 }
 
 .phone-section img {
     position: relative;
-    z-index: 2; /* Ensures the image is on top of the video */
-    width: 600px; /* Matches the container width */
-    height: 620px; /* Matches the container height */
+    z-index: 2; 
+    width: 600px; 
+    height: 620px;
     object-fit: cover;
 }
 
