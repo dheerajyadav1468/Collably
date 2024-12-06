@@ -36,7 +36,6 @@
                     <button class="button">Get Started</button>
                 </div>
                 <div class="phone-section">
-                    <!-- Video placed behind the image -->
                     <video class="background-video" autoplay muted loop>
                         <source src="images/playback.mp4" type="video/mp4">
                         Your browser does not support the video tag.
@@ -102,6 +101,90 @@
                </div>
             </div>
         </section>
+
+        <div class="earnings-calculator">
+    
+            <section class="header">
+                <div class="title">and here's HOW MUCH you can EARN 🤑</div>
+                <div class="subtitle">Let's do a quick math</div>
+            </section>
+    
+            <section class="slider-section">
+                <div class="slider-label">Select your no. of followers (Instagram, YouTube, etc)</div>
+                <div class="slider-container">
+                    <span class="range-value">0</span>
+                    <div class="slider-wrapper">
+                        <div class="slider-track">
+                            <div class="slider-ticks">
+                                <div class="tick"></div>
+                                <div class="tick"></div>
+                                <div class="tick"></div>
+                                <div class="tick"></div>
+                                <div class="tick"></div>
+                                <div class="tick"></div>
+                                <div class="tick"></div>
+                                <div class="tick"></div>
+                                <div class="tick"></div>
+                                <div class="tick"></div>
+                                <div class="tick"></div>
+                                <div class="tick"></div>
+                            </div>
+                            <div class="slider-fill followers-fill"></div>
+                        </div>
+                        <input type="range" class="slider" id="followersSlider" min="0" max="1000000" value="430000">
+                        <div class="slider-thumb">
+                            <div class="thumb-glow"></div>
+                            <div class="thumb-value">430K</div>
+                        </div>
+                    </div>
+                    <span class="range-value">1M</span>
+                </div>
+            </section>
+    
+            <section class="slider-section">
+                <div class="slider-label">Select the no. of content you do per month</div>
+                <div class="slider-container">
+                    <span class="range-value">10</span>
+                    <div class="slider-wrapper">
+                        <div class="slider-track">
+                            <div class="slider-ticks">
+                                <div class="tick"></div>
+                                <div class="tick"></div>
+                                <div class="tick"></div>
+                                <div class="tick"></div>
+                                <div class="tick"></div>
+                                <div class="tick"></div>
+                                <div class="tick"></div>
+                                <div class="tick"></div>
+                                <div class="tick"></div>
+                                <div class="tick"></div>
+                                <div class="tick"></div>
+                                <div class="tick"></div>
+                            </div>
+                            <div class="slider-fill content-fill"></div>
+                        </div>
+                        <input type="range" class="slider" id="contentSlider" min="10" max="50" value="30">
+                        <div class="slider-thumb">
+                            <div class="thumb-glow"></div>
+                            <div class="thumb-value">30</div>
+                        </div>
+                    </div>
+                    <span class="range-value">50</span>
+                </div>
+            </section>
+    
+            <section class="result-section">
+                <div class="result-label">Your earnings per month will be</div>
+                <div class="result-amount">
+                    <span class="currency">₹</span>
+                    <span class="amount">1L</span>
+                    <span class="asterisk"><sup>*</sup></span>
+                </div>
+                <div class="result-note">*based on an estimate that 0.1% of your followers become your customers</div>
+                <button class="button">Start Earning Now</button>
+                <div class="amount-blur">1L</div>
+            </section>
+        </div>
         <section class="service-image">
             <div class="image">
               <img src="images/sukhbir.svg" alt="Image 1" >
@@ -156,11 +239,11 @@
       </div>
     </div>
     
-    <div class="relative overflow-hidden section-wrapper">
+    <div class="scroller section-wrapper">
       <span class="absolute text-heading">
         Embrace Success with Top Brands
       </span>
-      <div class="absolute text-subheading">
+      <div class="absolute-brands">
         <div class="scroller">
           <ul class="brand-list" id="brand-list">
             <li><img src="images/ajio.svg" alt="brands" class="brand-logo" /></li>
