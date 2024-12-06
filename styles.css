@@ -23,7 +23,7 @@ body {
 }
 
 .wrapper {
-    max-width: 1440px;
+    max-width: 1220px;
     margin: 0 auto;
     padding: 2rem;
     border-left: 1px solid rgb(135, 31, 221);
@@ -152,7 +152,8 @@ body {
 /* Content Section */
 .content-section {
     text-align: center;
-    margin: 88px;
+    margin-bottom: 11rem;
+
 }
 
 .main-heading, .sub-heading {
@@ -218,11 +219,10 @@ body {
 
 /* Service Image Section */
 .service-image {
-    display: flexbox;
+    display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
-    text-align: center;
+    margin: 0px 0px 48px;
 }
 
 .image {
@@ -232,9 +232,19 @@ body {
     padding: 50px 0 20px;
 }
 
-.image img {
+.img1 {
     max-width: 600px;
     width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
+}
+
+.s-image{
+    max-width: 469px;
+    width: 100%;
+    height: 100%;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     object-fit: cover;
@@ -252,7 +262,7 @@ body {
 .profile {
     position: relative;
     margin-left: -15px;
-    transition: transform 0.3s ease, z-index 0.3s ease;
+    /* transition: transform 0.3s ease, z-index 0.3s ease; */
 }
 
 .profile:first-child {
@@ -262,14 +272,16 @@ body {
 .profile img {
     width: 80px;
     height: 80px;
+    z-index: 0;
     border-radius: 50%;
     border: 4px solid #7d57d6;
     object-fit: cover;
-    transition: transform 0.3s ease;
+    transition: 0.3s ease;
 }
 
 .profile img:hover {
-    transform: scale(1.1);
+    transform: scaleZ(1) scale(1.1);
+    z-index: 1;
 }
 
 /* Section Wrapper */
@@ -530,6 +542,7 @@ body {
     width: 100%;
     max-width: 800px;
     padding: 2rem;
+    display: inline;
 }
 
 .nav-tabs {
@@ -732,7 +745,7 @@ body {
     font-weight: 500;
     margin: 2rem 0;
     background:#ff9cbe;
-    -webkit-background-clip: text;
+    background-clip: text;
     color: transparent;
   text-shadow: 
     0 0 10px #ff89f9, 
@@ -771,6 +784,129 @@ body {
     opacity: 0.8;
     margin-bottom: 3rem;
     color: #CDC0ED;
+}
+
+/* Step Card */
+
+.card-section-1 , .card-section-2{
+    display: flex;
+}
+
+.card-section-2{
+    margin: 192px 0px;
+    row-gap: 20px;
+    justify-content: space-between;
+}
+
+.card-image-1 img{
+    height: 475px;
+    width: 475px;
+    margin: 19px 123.9px 0px 40px;
+}
+
+.card-image-2 img{
+    height: 475px;
+    width: 475px;
+    margin: 19px 28px 0px;
+}
+
+.card-text-1{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 24px 40px 0px 16px;
+    background-image: url("images/thumbs-up.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.card-text-2{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 48px 0px 0px 48px; 
+    background-image: url("images/plug.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.card-text-3{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 24px 40px 0px 16px;
+    background-image: url("images/heart.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.card-text-4{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 48px 0px 0px 48px; 
+    background-image: url("images/rupee-purple.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.card-heading-1{
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: bold;
+    color: #cdc0ed;
+    text-align: right;
+    text-shadow:0px 0px 0px #cdc0ed,0px 0px 11px #cdc0ed, 0px 0px 41px #cdc0ed;
+}
+
+.card-heading-2{
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: bold;
+    color: #cdc0ed;
+    text-align: left;
+    text-shadow: blur(25.5px);
+    text-shadow:0px 0px 0px #cdc0ed,0px 0px 11px #cdc0ed, 0px 0px 41px #cdc0ed
+}
+
+.card-sub-heading-1{
+    font-size: 18px;
+    line-height: 28px;
+    color: #cdc0ed;
+    text-align: right;
+}
+
+.card-sub-heading-2{
+    font-size: 18px;
+    line-height: 28px;
+    color: #cdc0ed;
+    text-align:left; 
+}
+
+.card-button-1{
+    left:33%;
+    position: relative;
+    top: 43%;
+}
+
+.card-button-2{
+    right: 1%;
+    position: relative;
+    top: 43%; 
+}
+ 
+.img-2 img,.img-3 img,.img-4 img{
+    display: flex;
+    position: absolute;
+    z-index: -1;
+    margin: -166px -49px;
+}
+
+.img-1 img{
+    display: flex;
+    position: absolute;
+    z-index: -1;
+    margin: -100px 15px; 
 }
 
 
