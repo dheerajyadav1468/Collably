@@ -1129,3 +1129,88 @@ body {
 
 }
 
+
+/* Brand Section */
+
+.brand-hero-section{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 0px 0px 56px;
+    background-image: url("images/hero-bg.png");
+    background-size: 90% 110%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.brand-hero-content{
+    display: flex;
+    flex-direction: column;
+    padding: 300px 0px 0px;
+}
+
+.brand-laptop{
+    margin: 172.152px 0px 0px;
+}
+
+.brand-laptop img{
+    object-fit: contain;
+}
+
+.brand-heading{
+    font-size: 40px;
+    margin: 0px -200px 12px 0px;
+}
+
+.brand-sub-heading{
+    font-size: 28px;
+    margin: 0px 40px 0px 0px;
+}
+
+.brand-button{
+    padding: 12px 44px;
+}
+
+.brand-card{
+    padding: 72px 100px 12px;
+}
+
+.brand-card-img{
+    display: flex;
+    flex-direction: column;
+    margin: 0px 68px;
+}
+
+.image-card-1, .image-card-2{
+    display: flex;
+    gap: 10px;
+}
+
+.image-card-2{
+    margin:15px 0px 0px 0px;
+}
+
+.brand-icon{
+    display: flex;
+    margin: 56px -34px 160px;
+    padding: 0px 27px;
+    gap: 15px;
+}
+
+.icon-heading{
+    padding: 118px 0px 0px;
+    font-size: 36px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.brand-card-heading{
+    display: flex;
+    font-size: 36px;
+    gap: 10px;
+}
+
+.brand-card-sub-heading{
+    font-size: 44px;
+    margin: 12px 0px 35px;
+    font-weight: bold;
+}
