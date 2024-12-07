@@ -1206,11 +1206,16 @@ body {
 .brand-card-heading{
     display: flex;
     font-size: 36px;
-    gap: 10px;
+    gap: .5rem;
 }
 
 .brand-card-sub-heading{
     font-size: 44px;
     margin: 12px 0px 35px;
-    font-weight: bold;
+    background: linear-gradient(90deg, #4971fd, #3bc8df);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: 0.75rem;
+    font-weight: 500;
 }
