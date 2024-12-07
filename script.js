@@ -108,6 +108,75 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   
     moveLogos(); 
+
+    
+    
+    //     const container = document.querySelector('.parallax-container');
+    //     const rows = document.querySelectorAll('.image-row');
+    //     let lastScrollTop = 0;
+    //     let ticking = false;
+    //     let isFullyScrolled = false;
+    
+    //     function updateParallax(scrollPos) {
+    //         const containerHeight = container.offsetHeight;
+    //         const scrollProgress = scrollPos / (containerHeight - window.innerHeight);
+    
+    //         rows.forEach((row, index) => {
+    //             const images = row.querySelectorAll('.image-container');
+    //             const rowTop = row.offsetTop;
+    //             const rowHeight = row.offsetHeight;
+    //             const viewportBottom = scrollPos + window.innerHeight;
+    
+    //             if (viewportBottom > rowTop && scrollPos < rowTop + rowHeight) {
+    //                 const progress = Math.min((viewportBottom - rowTop) / (window.innerHeight + rowHeight), 1);
+    //                 const rotateX = 20 - progress * 20;
+    //                 const rotateY = (index % 2 === 0 ? 10 : -10) * (1 - progress);
+    //                 const translateZ = -100 + progress * 100;
+    
+    //                 row.style.transform = `translateZ(${translateZ}px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+    
+    //                 if (progress === 1 && !isFullyScrolled) {
+    //                     isFullyScrolled = true;
+    //                     startHorizontalMovement();
+    //                 }
+    //             }
+    //         });
+    //     }
+    
+    //     function startHorizontalMovement() {
+    //         rows.forEach((row, index) => {
+    //             const direction = index % 2 === 0 ? 1 : -1;
+    //             const speed = 50 + (index * 10); // Varying speeds for each row
+    //             let position = 0;
+    
+    //             function moveRow() {
+    //                 position += direction;
+    //                 if (Math.abs(position) > row.offsetWidth) {
+    //                     position = 0;
+    //                 }
+    //                 row.style.transform = `translateX(${position}px)`;
+    //                 requestAnimationFrame(moveRow);
+    //             }
+    
+    //             moveRow();
+    //         });
+    //     }
+    
+    //     function onScroll() {
+    //         lastScrollTop = window.pageYOffset;
+    //         if (!ticking) {
+    //             window.requestAnimationFrame(() => {
+    //                 updateParallax(lastScrollTop);
+    //                 ticking = false;
+    //             });
+    //             ticking = true;
+    //         }
+    //     }
+    
+    //     window.addEventListener('scroll', onScroll, { passive: true });
+ 
+    
+    // updateParallax(window.pageYOffset);    
     
 });
 
