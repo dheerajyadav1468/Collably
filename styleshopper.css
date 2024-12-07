@@ -106,7 +106,8 @@ header {
 }
 
 .product-grid {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 0.5rem;
     padding: 0.5rem;
 }
@@ -234,7 +235,6 @@ main {
     font-weight: 700;
     color: #5A2EBF;
     font-size: 1.5rem;
-    letter-spacing: 0.08rem;
 }
 
 .section-sub-title {
@@ -364,3 +364,34 @@ main {
 .creator-month img{
     object-fit: cover;
 }
+
+.concluding-card{
+    width: 100%;
+}
+
+.creator-display-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+    padding: 0.5rem;
+}
+
+.creator-image-title {
+    margin-bottom: 0.8rem;
+    font-weight: 800;
+    color: #2f9ac5;
+    font-size: 1.5rem;
+}
+.imaage-container {
+    position: relative;
+    width: 240px;
+    height: 240px;
+}
+
+.creator-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+
