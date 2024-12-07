@@ -35,14 +35,17 @@ body {
 }
 
 .logo {
-    font-family: 'Arial', sans-serif; /* Use a clean, professional font */
-    font-size: 1rem; /* Adjust the size of the logo text */
-    font-weight: bold; /* Make the logo text bold */
-    text-transform: uppercase; /* Optional: Transform the text to uppercase */
-    color: blue; /* White color for the logo text */
-    text-align: left; /* Align the logo text to the left */
-    margin: 0; /* Remove default margins */}
-    
+    font-family: 'Arial', sans-serif; 
+    font-size: 1rem; 
+    font-weight: bold; 
+    text-transform: uppercase; 
+    color: blue;
+    left: 3.75rem;
+    position: absolute;
+}
+.logo a{
+    text-decoration: none;
+}
 header {
     display: flex;
     justify-content: space-between;
@@ -103,11 +106,9 @@ header {
 }
 
 .product-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    display: flex;
     gap: 0.5rem;
     padding: 0.5rem;
-    height: 150px;
 }
 
 .product-card {
@@ -222,3 +223,144 @@ main {
     padding-bottom: 70px;
 }
 
+
+.creator-section {
+    margin-bottom: 1rem;
+    padding: 0 0.5rem;
+}
+
+.section-title {
+    margin-bottom: 0.8rem;
+    font-weight: 700;
+    color: #5A2EBF;
+    font-size: 1.5rem;
+    letter-spacing: 0.08rem;
+}
+
+.section-sub-title {
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #082a74;
+    font-size: 1rem;
+}
+
+.creator-scroll {
+    display: flex;
+    gap: 0.75rem;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.creator-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+.creator-card {
+    margin: 0.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    flex-shrink: 0;
+}
+
+.video-container {
+    position: relative;
+    width: 136px;
+    height: 240px;
+}
+
+.creator-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+
+.gradient-overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 0.5rem;
+    box-shadow: inset 0 -65px 37px -38px rgba(90, 46, 191, 0.86);
+}
+
+.creator-info {
+    position: absolute;
+    bottom: 0;
+    padding: 0 0 0.25rem 0.75rem;
+}
+
+.creator-name {
+    font-size: 0.625rem;
+    color: white;
+    font-weight: 500;
+    text-decoration: underline;
+}
+
+.follower-count {
+    font-size: 0.625rem;
+    color: white;
+}
+
+.shop-button {
+    display: flex;
+    height: 2rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+    background-color: #5A2EBF;
+    padding: 0 0.25rem;
+    cursor: pointer;
+    border: none;
+    box-shadow: 2px 2px 0 0 rgb(171, 26, 161);
+}
+
+.shop-icon {
+    width: 30px;
+    height: 30px;
+}
+
+.shop-button span {
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-shadow: 0 0 4.97px rgba(255, 255, 255, 0.35);
+}
+
+/* Trendind Brand Section */
+
+.trending-brand{
+    margin-bottom: 1rem; 
+    padding-left: .5rem;
+    padding-right: .5rem;
+}
+
+
+.trending-brand-img{
+    display: flex;
+    overflow-x: auto;
+    scrollbar-width: none;
+    gap: .5rem;
+}
+
+.trending-brand-img img{
+    border-radius: 0.75rem;
+    max-width: 100%;
+    width: 91.666667%;
+    height: auto;
+}
+
+/* Creator of the month section  */
+
+.creator-month{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3rem;
+}
+
+.creator-month img{
+    object-fit: cover;
+}
