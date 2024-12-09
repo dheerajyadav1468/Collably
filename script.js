@@ -178,6 +178,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // updateParallax(window.pageYOffset);    
     
+    
 });
 
 

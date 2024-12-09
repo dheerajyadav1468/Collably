@@ -358,7 +358,7 @@ main {
 .creator-month{
     display: flex;
     flex-direction: column;
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
 }
 
 .creator-month img{
@@ -395,3 +395,193 @@ main {
     border-radius: 0.5rem;
 }
 
+.featured-creators{
+    margin: 0px 0px 16px;
+    margin-bottom: 1rem;
+    padding: 0px 8px;
+}
+
+.f-text{
+    display: flex;
+    margin: 0px 0px 8px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.view-link{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+    font-size: 12px;
+    gap: 0.25rem;
+}
+
+.f-img{
+    display: flex;
+    overflow-x: auto;
+    scrollbar-width: none;
+    gap: 0.5rem;
+    padding: 0px 0px 5px 8px;
+}
+
+.f-img img{
+    border-radius: 50%;
+    box-shadow: rgb(89, 46, 191) 2px 2px 0px 0px;
+    height: 100px;
+    width: 100px;
+}
+
+.f-img-1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 0.25rem;
+}
+
+.img-text{
+  font-size: .75rem;
+  line-height: 1rem;
+  width: 5rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  text-align: center;
+}
+/* Brand Spotlight Section */
+
+.Brand-spotlight{
+    background-image: url("images/spotlight-bg.jpeg");
+    background-repeat: no-repeat;
+    min-height: 555px;
+    margin-bottom: 1rem;
+    background-position: center center;
+    background-size: 100% 100%;
+    position: relative;
+    border-radius: .75rem;
+}     
+
+.brand-details{
+    display: flex;
+    gap: .5rem;
+    overflow-x: auto;
+    scrollbar-width: none;
+    max-width: 96%;
+    position: absolute;
+    left: .5rem;
+    bottom: 5rem;
+}
+
+.brand-img{
+    display: flex;
+    gap: .5rem;
+    width: 170px;
+    flex-direction: column;
+    background-color: #fff;
+    border-width: 1px;
+    border-radius: .5rem;
+    /* border: 2px solid black; */
+}
+
+.brand-img img{
+    height: auto;
+    max-height: 270px;
+    border-top-left-radius: .5rem;
+    border-top-right-radius: .5rem;
+    border: .5px solid #fff;
+    object-fit: cover;
+}
+
+.brand-name{
+  font-size: 12px;
+  line-height: 1rem;
+  width: 8rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-weight: 700;
+  margin-bottom: .5rem;
+}
+
+.brand-description{
+    padding: 8px 20px;
+    border-bottom-right-radius: .5rem;
+    border-bottom-left-radius: .5rem;
+}
+
+.description{
+    width: 8.55rem;
+    margin-bottom: .5rem;
+}
+
+.brand-price{
+    display: flex;
+    gap: .25rem;
+    align-items: center;
+}
+
+.price-details{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.price{
+    font-weight: 700;
+    font-size: .8rem;
+    color: rgb(89 46 191);
+}
+
+.real-price{
+    font-weight: 500;
+    font-size: .6rem; 
+    text-decoration-line: line-through;
+    color:  rgb(26 51 101 );
+}
+
+.brand-offer{
+    font-weight: 650;
+    font-size: .7rem;
+    color: rgb(10 157 110 );
+}
+
+.product-display {
+    background-image: url("images/product-bg.jpeg");
+    background-repeat: no-repeat;
+    min-height: 555px;
+    margin-bottom: 1rem;
+    background-position: center center;
+    background-size: 100% 100%;
+    position: relative;
+    border-radius: 0.75rem;
+  }
+  
+  .product-details {
+      display: flex;
+      gap: 0.5rem;
+      overflow-x: auto;
+      scrollbar-width: none;
+      max-width: 96%;
+      position: absolute;
+      left: 0.5rem;
+      bottom: 1rem;
+    }
+
+    .wishlist-icon{
+        position: absolute;
+        background-color: transparent;
+        border-radius: 59%;
+      }
+      
+      .icon{
+          background-color:transparent;
+          position: relative;
+          right: -7.9rem;
+          bottom: -13rem;
+      }
+      
+      .icon img{
+          border-radius: 50%;
+          height: auto;
+      }
