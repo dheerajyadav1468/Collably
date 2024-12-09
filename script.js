@@ -110,75 +110,69 @@ document.addEventListener('DOMContentLoaded', () => {
     moveLogos(); 
 
     
+   
     
-    //     const container = document.querySelector('.parallax-container');
-    //     const rows = document.querySelectorAll('.image-row');
-    //     let lastScrollTop = 0;
-    //     let ticking = false;
-    //     let isFullyScrolled = false;
+    const section = document.querySelector('.section');
+const dots = document.querySelectorAll('.dot');
+const textContents = document.querySelectorAll('.text-content');
+const screenContents = document.querySelectorAll('.screen-content');
+let currentStep = 1; 
+let isScrolling = false; 
+const totalSteps = dots.length; 
+
+function setActiveStep(step) {
     
-    //     function updateParallax(scrollPos) {
-    //         const containerHeight = container.offsetHeight;
-    //         const scrollProgress = scrollPos / (containerHeight - window.innerHeight);
+    dots.forEach((dot, index) => {
+        dot.classList.toggle('active', index === step - 1);
+    });
+
+    textContents.forEach((content, index) => {
+        content.classList.toggle('active', index === step - 1);
+    });
+
+    screenContents.forEach((content, index) => {
+        content.classList.toggle('active', index === step - 1);
+    });
+
+    currentStep = step;
+}
+
+function handleScroll(event) {
     
-    //         rows.forEach((row, index) => {
-    //             const images = row.querySelectorAll('.image-container');
-    //             const rowTop = row.offsetTop;
-    //             const rowHeight = row.offsetHeight;
-    //             const viewportBottom = scrollPos + window.innerHeight;
+    if (isScrolling) return;
+
     
-    //             if (viewportBottom > rowTop && scrollPos < rowTop + rowHeight) {
-    //                 const progress = Math.min((viewportBottom - rowTop) / (window.innerHeight + rowHeight), 1);
-    //                 const rotateX = 20 - progress * 20;
-    //                 const rotateY = (index % 2 === 0 ? 10 : -10) * (1 - progress);
-    //                 const translateZ = -100 + progress * 100;
+    isScrolling = true;
+
     
-    //                 row.style.transform = `translateZ(${translateZ}px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-    
-    //                 if (progress === 1 && !isFullyScrolled) {
-    //                     isFullyScrolled = true;
-    //                     startHorizontalMovement();
-    //                 }
-    //             }
-    //         });
-    //     }
-    
-    //     function startHorizontalMovement() {
-    //         rows.forEach((row, index) => {
-    //             const direction = index % 2 === 0 ? 1 : -1;
-    //             const speed = 50 + (index * 10); // Varying speeds for each row
-    //             let position = 0;
-    
-    //             function moveRow() {
-    //                 position += direction;
-    //                 if (Math.abs(position) > row.offsetWidth) {
-    //                     position = 0;
-    //                 }
-    //                 row.style.transform = `translateX(${position}px)`;
-    //                 requestAnimationFrame(moveRow);
-    //             }
-    
-    //             moveRow();
-    //         });
-    //     }
-    
-    //     function onScroll() {
-    //         lastScrollTop = window.pageYOffset;
-    //         if (!ticking) {
-    //             window.requestAnimationFrame(() => {
-    //                 updateParallax(lastScrollTop);
-    //                 ticking = false;
-    //             });
-    //             ticking = true;
-    //         }
-    //     }
-    
-    //     window.addEventListener('scroll', onScroll, { passive: true });
- 
-    
-    // updateParallax(window.pageYOffset);    
-    
-    
+    const delta = event.deltaY;
+
+    if (delta > 0 && currentStep < totalSteps) {
+        setActiveStep(currentStep + 1);
+    } else if (delta < 0 && currentStep > 1) {
+        setActiveStep(currentStep - 1);
+    } else if (currentStep === totalSteps && delta > 0) {
+        section.style.position = 'relative';
+        window.scrollBy({
+            top: 100, 
+            behavior: 'smooth',
+        });
+    } else if (currentStep === 1 && delta < 0) {
+        section.style.position = 'relative';
+        window.scrollBy({
+            top: -100, 
+            behavior: 'smooth',
+        });
+    }
+
+    setTimeout(() => (isScrolling = false), 1000);
+}
+
+window.addEventListener('wheel', (event) => {
+    event.preventDefault(); 
+    handleScroll(event);
+});
+
 });
 
 
