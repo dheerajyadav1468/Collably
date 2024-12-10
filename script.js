@@ -112,66 +112,66 @@ document.addEventListener('DOMContentLoaded', () => {
     
    
     
-    const section = document.querySelector('.section');
-const dots = document.querySelectorAll('.dot');
-const textContents = document.querySelectorAll('.text-content');
-const screenContents = document.querySelectorAll('.screen-content');
-let currentStep = 1; 
-let isScrolling = false; 
-const totalSteps = dots.length; 
+//     const section = document.querySelector('.section');
+// const dots = document.querySelectorAll('.dot');
+// const textContents = document.querySelectorAll('.text-content');
+// const screenContents = document.querySelectorAll('.screen-content');
+// let currentStep = 1; 
+// let isScrolling = false; 
+// const totalSteps = dots.length; 
 
-function setActiveStep(step) {
+// function setActiveStep(step) {
     
-    dots.forEach((dot, index) => {
-        dot.classList.toggle('active', index === step - 1);
-    });
+//     dots.forEach((dot, index) => {
+//         dot.classList.toggle('active', index === step - 1);
+//     });
 
-    textContents.forEach((content, index) => {
-        content.classList.toggle('active', index === step - 1);
-    });
+//     textContents.forEach((content, index) => {
+//         content.classList.toggle('active', index === step - 1);
+//     });
 
-    screenContents.forEach((content, index) => {
-        content.classList.toggle('active', index === step - 1);
-    });
+//     screenContents.forEach((content, index) => {
+//         content.classList.toggle('active', index === step - 1);
+//     });
 
-    currentStep = step;
-}
+//     currentStep = step;
+// }
 
-function handleScroll(event) {
+// function handleScroll(event) {
     
-    if (isScrolling) return;
-
-    
-    isScrolling = true;
+//     if (isScrolling) return;
 
     
-    const delta = event.deltaY;
+//     isScrolling = true;
 
-    if (delta > 0 && currentStep < totalSteps) {
-        setActiveStep(currentStep + 1);
-    } else if (delta < 0 && currentStep > 1) {
-        setActiveStep(currentStep - 1);
-    } else if (currentStep === totalSteps && delta > 0) {
-        section.style.position = 'relative';
-        window.scrollBy({
-            top: 100, 
-            behavior: 'smooth',
-        });
-    } else if (currentStep === 1 && delta < 0) {
-        section.style.position = 'relative';
-        window.scrollBy({
-            top: -100, 
-            behavior: 'smooth',
-        });
-    }
+    
+//     const delta = event.deltaY;
 
-    setTimeout(() => (isScrolling = false), 1000);
-}
+//     if (delta > 0 && currentStep < totalSteps) {
+//         setActiveStep(currentStep + 1);
+//     } else if (delta < 0 && currentStep > 1) {
+//         setActiveStep(currentStep - 1);
+//     } else if (currentStep === totalSteps && delta > 0) {
+//         section.style.position = 'relative';
+//         window.scrollBy({
+//             top: 100, 
+//             behavior: 'smooth',
+//         });
+//     } else if (currentStep === 1 && delta < 0) {
+//         section.style.position = 'relative';
+//         window.scrollBy({
+//             top: -100, 
+//             behavior: 'smooth',
+//         });
+//     }
 
-window.addEventListener('wheel', (event) => {
-    event.preventDefault(); 
-    handleScroll(event);
-});
+//     setTimeout(() => (isScrolling = false), 1000);
+// }
+
+// window.addEventListener('wheel', (event) => {
+//     event.preventDefault(); 
+//     handleScroll(event);
+// });
   
 });
 
