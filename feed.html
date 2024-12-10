@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collably - Social Commerce Platform</title>
+    <link rel="stylesheet" href="styleshopper.css">
+    <link rel="stylesheet" href="feed.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <div class="smartphone-container">
+        <header>
+            <button class="menu-btn">
+                <img src="images/hamburger.svg">
+            </button>
+            <div class="logo"> <a href="index.html">Collably</a></div>
+            <div class="header-icons">
+                <button class="icon-btn">
+                   <img src="images/search-blue.svg">
+                </button>
+                <button class="icon-btn">
+                    <img src="images/wishlist-blue.svg">
+                    <span class="counter">0</span>
+                </button>
+                <button class="icon-btn">
+                    <img src="images/cart-blue.svg">
+                    <span class="counter">0</span>
+                </button>
+            </div>
+        </header>
+
+<main>
+
+    <div class="story-container" id="storyContainer"></div>
+
+    <div class="story-viewer" id="storyViewer">
+        <div class="story-header">
+            <div class="profile-info">
+                <img class="profile-pic" id="storyProfilePic" src="" alt="Profile Picture">
+                <div class="profile-text">
+                    <div class="profile-username" id="storyProfileName"></div>
+                    <div class="profile-time">over 1 year ago</div>
+                </div>
+            </div>
+            <div class="close-btn" id="closeBtn">&times;</div>
+        </div>
+        <div class="progress-container" id="progressContainer"></div>
+        <img class="story-media" id="storyImage" src="" alt="Story Image">
+        <video class="story-media" id="storyVideo" style="display: none;"></video>
+        <div class="nav-btn prev-btn" id="prevBtn">&#10094;</div>
+        <div class="nav-btn next-btn" id="nextBtn">&#10095;</div>
+        <div class="view-product" id="viewProduct">View Product</div>
+    </div>
+      
+      
+
+    <div class="mx-4 my-4">
+        <div class="header">
+            <div class="header-title">Blogs Corner</div>
+            <div class="view-all">
+                <div class="view-all-text">View all</div>
+                <img src="images/arrow.svg" width="16" height="16" alt="arrow">
+            </div>
+        </div>
+        
+        <div class="blog-container">
+            <!-- Blog Card 1 -->
+            <div class="blog-card">
+                <div class="card-header">
+                    <div class="author-info">
+                        <img src="images/creator.jpeg" class="author-avatar" alt="author">
+                        <div class="author-name">Sakshi Kapoor</div>
+                    </div>
+                    <div class="banner">
+                        <img src="images/banner-blog-pink.svg" width="80" height="100" alt="banner">
+                        <span class="banner-text">Hot topic</span>
+                    </div>
+                </div>
+                
+                <img src="images/blog-card.webp" class="blog-image" alt="blog">
+                
+                <div class="blog-title">Collably Welcomes AJIO FASHION to Our Recommend Affiliate Program!</div>
+                
+                <div class="blog-meta">
+                    <div class="meta-text">Aug 12</div>
+                    <img src="/icons/dot.svg" width="3" height="3" alt="dot">
+                    <div class="meta-text">7 min read</div>
+                </div>
+                
+                <div class="suggested">Suggested for you</div>
+                
+                <div class="card-footer">
+                    <div class="likes">
+                        <img src="images/wishlist-pink.svg" width="25" height="25" alt="like">
+                        <div class="like-count">1</div>
+                    </div>
+                    <svg class="share-icon" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#1A3365" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="7" y1="17" x2="17" y2="7"></line>
+                        <polyline points="7 7 17 7 17 17"></polyline>
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Blog Card 2 -->
+            <div class="blog-card">
+                <div class="card-header">
+                    <div class="author-info">
+                        <img src="images/creator.jpeg" class="author-avatar" alt="author">
+                        <div class="author-name">Sakshi Kapoor</div>
+                    </div>
+                    <div class="banner">
+                        <img src="images/banner-blog-pink.svg" width="80" height="100" alt="banner">
+                        <span class="banner-text">Hot topic</span>
+                    </div>
+                </div>
+                
+                <img src="images/blog-card2.webp" class="blog-image" alt="blog">
+                
+                <div class="blog-title">Sukhbir singh – From Bhangra Beats to Fashion Feats – A Merchandise Journey</div>
+                
+                <div class="blog-meta">
+                    <div class="meta-text">Apr 18</div>
+                    <img src="/icons/dot.svg" width="3" height="3" alt="dot">
+                    <div class="meta-text">7 min read</div>
+                </div>
+                
+                <div class="suggested">Suggested for you</div>
+                
+                <div class="card-footer">
+                    <div class="likes">
+                        <img src="images/wishlist-pink.svg" width="25" height="25" alt="like">
+                        <div class="like-count">1</div>
+                    </div>
+                    <svg class="share-icon" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#1A3365" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="7" y1="17" x2="17" y2="7"></line>
+                        <polyline points="7 7 17 7 17 17"></polyline>
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Blog Card 3 -->
+            <div class="blog-card">
+                <div class="card-header">
+                    <div class="author-info">
+                        <img src="images/creator.jpeg" class="author-avatar" alt="author">
+                        <div class="author-name">Sakshi Kapoor</div>
+                    </div>
+                    <div class="banner">
+                        <img src="images/banner-blog-pink.svg" width="80" height="100" alt="banner">
+                        <span class="banner-text">Hot topic</span>
+                    </div>
+                </div>
+                
+                <img src="images/blog-card3.webp" class="blog-image" alt="blog">
+                
+                <div class="blog-title">Celebrating SUKHBIR SINGH’S Timeless Music: From Bhangra Beats to Love Ballads</div>
+                
+                <div class="blog-meta">
+                    <div class="meta-text">Mar 10</div>
+                    <img src="/icons/dot.svg" width="3" height="3" alt="dot">
+                    <div class="meta-text">7 min read</div>
+                </div>
+                
+                <div class="suggested">Suggested for you</div>
+                
+                <div class="card-footer">
+                    <div class="likes">
+                        <img src="images/wishlist-pink.svg" width="25" height="25" alt="like">
+                        <div class="like-count">1</div>
+                    </div>
+                    <svg class="share-icon" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#1A3365" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="7" y1="17" x2="17" y2="7"></line>
+                        <polyline points="7 7 17 7 17 17"></polyline>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <div class="mx-4 my-4">
+        <div class="header">
+            <div class="header-title">Trending Creators</div>
+            <div class="view-all">
+                <div class="view-all-text">View all</div>
+                <img src="images/arrow.svg" width="16" height="16" alt="arrow">
+            </div>
+        </div>
+        <div class="blog-container">
+    <div class="creator-card">
+        <section class="profile-section">
+                <div class="profile-image">
+                    <img src="images/profile-trending.webp" alt="avatar">
+                </div>
+                <div class="profile-info">
+                    <h2 class="profile-name">badalmusic</h2>
+                    <span class="profile-tag">Singer</span>
+                </div>
+           
+        </section>
+
+        <section class="stats-section">
+            <div class="stat-item">
+                <span class="stat-value">22</span>
+                <span class="stat-label">products</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-value">13.8K</span>
+                <span class="stat-label">followers</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-value">151</span>
+                <span class="stat-label">following</span>
+            </div>
+        </section>
+
+        <div class="products-section">
+            <img src="images/trending-product1.webp" alt="prod-pic" class="product-image">
+            <img src="images/trending-product2.webp" alt="prod-pic" class="product-image">
+            <img src="images/trending-product3.webp" alt="prod-pic" class="product-image">
+        </div>
+
+        <section class="buttons-section">
+            <button class="btn btn-view">
+                <img src="images/curate-purple.svg" alt="curate-icon">
+                <span>View Store</span>
+            </button>
+            <button class="btn btn-follow">
+                <img src="images/plus-white.svg" alt="follow-icon">
+                <span>Follow</span>
+            </button>
+        </section>
+    </div>
+
+
+    <div class="creator-card">
+        <section class="profile-section">
+                <div class="profile-image">
+                    <img src="images/image28.webp" alt="avatar">
+                </div>
+                <div class="profile-info">
+                    <h2 class="profile-name">mayavi_doodle</h2>
+                    <span class="profile-tag">Singer</span>
+                </div>
+           
+        </section>
+
+        <section class="stats-section">
+            <div class="stat-item">
+                <span class="stat-value">11</span>
+                <span class="stat-label">products</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-value">145K</span>
+                <span class="stat-label">followers</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-value">680</span>
+                <span class="stat-label">following</span>
+            </div>
+        </section>
+
+        <div class="products-section">
+            <img src="images/trending-product4.webp" alt="prod-pic" class="product-image">
+            <img src="images/trending-product5.webp" alt="prod-pic" class="product-image">
+            <img src="images/trending-product6.webp" alt="prod-pic" class="product-image">
+        </div>
+
+        <section class="buttons-section">
+            <button class="btn btn-view">
+                <img src="images/curate-purple.svg" alt="curate-icon">
+                <span>View Store</span>
+            </button>
+            <button class="btn btn-follow">
+                <img src="images/plus-white.svg" alt="follow-icon">
+                <span>Follow</span>
+            </button>
+        </section>
+    </div>
+</div>
+
+    </div>
+
+          
+        </main>
+
+  <footer>
+            <nav class="bottom-nav">
+                <button class="nav-item active">
+                    <a href="shopper.html"> <img src="images/new-nav-icon-home-active.svg">
+                    <span>Home</span></a>
+                </button>
+                <button class="nav-item">
+                    <a href="feed.html"> <img src="images/new-nav-icon-feed-inactive.svg">
+                    <span>Feed</span></a>
+                </button>
+                <button class="nav-item">
+                    <a href="form.html"><img src="images/new-nav-icon-item-inactive.svg">
+                    <span>My Items</span></a>
+                </button>
+                <button class="nav-item">
+                    <a href="form.html"><img src="images/new-nav-icon-me-inactive.svg">
+                    <span>Me</span></a>
+                </button>
+            </nav>
+        </footer>
+        </div>
+    
+        <script src="script.js"></script>
+    </body>
+    </html>
