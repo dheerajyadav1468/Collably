@@ -3,22 +3,22 @@
     --brand-section-text: #ffffff;
     --scroller-section-bg-start: #11062e;
     --scroller-section-bg-end: #740b66;
-    --scroller-heading-bg-start: #b513ca;
-    --scroller-heading-bg-end: #4a0b74;
+    --scroller-heading-bg-start: #ff0055;
+    --scroller-heading-bg-end: #741a38;
     --bottom-nav-bg: #ff0048;
     --bottom-nav-text: #ffffff;
     --footer-button-bg-start: #e69419;
     --footer-button-bg-end: #f43f06;
     --footer-button-text: #ffffff;
-    --slider-section-bg-start: #b513ca;
-    --slider-section-bg-end: #4a0b74;
+    --slider-section-bg-start: #C2185B;
+    --slider-section-bg-end: #C2185B;
     --button-bg: #520ed1;
     --button-shadow: #b90d86;
     --tab-text: rgba(255, 255, 255, 0.7);
     --tab-text-active: white;
-    --slider-label: #CDC0ED;
-    --range-value: #DDC9FF;
-    --slider-track-bg: rgba(255, 255, 255, 0.1);
+    --slider-label: #ffffff;
+    --range-value: #ffffff;
+    --slider-track-bg: rgb(255, 255, 255);
     --slider-tick: rgba(255, 255, 255, 0.5);
     --followers-fill-start: #FF1B6B;
     --followers-fill-mid: #FF5B94;
@@ -28,10 +28,10 @@
     --content-fill-end: #8B3DFF;
     --slider-thumb: white;
     --result-border: white;
-    --result-label: #CDC0ED;
+    --result-label: #ffffff;
     --result-amount: #ff9cbe;
     --result-amount-shadow: #ff89f9;
-    --result-note: #CDC0ED;
+    --result-note: #ffffff;
     --body-bg: #FAF9F6;
     --text-primary: #000000;
     --footer-button-hover: #e66b00;
@@ -39,7 +39,7 @@
     --nav-tabs-border: rgba(255, 255, 255, 0.1);
     --result-section-bg: rgba(255, 255, 255, 0);
     --container-bg: #FAF9F6;
-    --category-overlay-bg: rgb(228, 195, 10);
+    --category-overlay-bg: #ff0055;
     --category-title-color: white;
     --top-navbar-color: #000000;
     --nav-item-hover: red;
@@ -48,16 +48,16 @@
     --navbar-button-bg: #ff0055;
     --key-inner-bg: #f5f5f5;
     --section-title-color: #333;
-    --section-title-span-color: #1890ff;
-    --feature-box-bg: #5cb4cf2d;
+    --section-title-span-color: #ff0048;
+    --feature-box-bg: #5ccf6252;
     --feature-box-shadow: rgba(0, 0, 0, 0.1);
     --feature-box-title-color: #333;
-    --feature-box-text-color: #666;
+    --feature-box-text-color: #000000;
     --image-rotation-bg: #ffffff;
     --dropdown-bg: #fff;
     --dropdown-shadow: rgba(0, 0, 0, 0.1);
-    --dropdown-button-bg: #ff6600;
-    --dropdown-button-hover: #ff5000;
+    --dropdown-button-bg: #ff0055e0;
+    --dropdown-button-hover: #ff0055e0;
     --dropdown-content-bg: #F0CEBA;
     --footer-bg: #f8f4eb;
     --footer-border: black;
@@ -75,21 +75,23 @@
     --app-btn-bg: black;
     --app-btn-hover: #fa4582;
     --quick-easy-bg: #fff;
-    --quick-easy-title-bg: #1890ff;
-    --quick-easy-text-color: #000;
+    --quick-easy-title-bg: #ff0055;
+    --quick-easy-text-color: #ffffff;
+    --quick-easy-text-title-color: #000000;
     --step-border-color: black;
-    --step-icon-bg: #1890ff;
-    --get-started-btn-bg: #4a0b74;
+    --step-text-color: rgb(255, 255, 255);
+    --step-icon-bg: #ff0055;
+    --get-started-btn-bg: #ff0055;
     --btn-bottom-border: black;
     --community-subtitle-bg: rgba(130, 71, 255, 0.1);
-    --community-subtitle-color: #8247ff;
+    --community-subtitle-color: #ff0055;
     --community-title-color: #000;
     --card-border-color: #eee;
     --card-hover-shadow: rgba(0,0,0,0.1);
     --card-content-color: #666;
     --review-section-bg: #f8f9ff;
-    --review-badge-bg: #8B5CF6;
-    --review-title-span: #8B5CF6;
+    --review-badge-bg: #ff0055;
+    --review-title-span: #000000;
     --review-block-bg: white;
     --review-block-shadow: rgba(0, 0, 0, 0.05);
     --review-text-color: #666;
@@ -99,7 +101,7 @@
     --font-size-xs: 0.875rem;
     --font-size-sm: 1rem;
     --font-size-md: 1.125rem;
-    --font-size-lg: 1.25rem;
+    --font-size-lg: 1.75rem;
     --font-size-xl: 1.5rem;
     --font-size-2xl: 1.75rem;
     --font-size-3xl: 2.25rem;
@@ -119,7 +121,7 @@
     --font-size-footer-title: 20px;
     --font-size-footer-text: 16px;
     --font-size-client-title: 36px;
-    --font-size-banner-title: 46px;
+    --font-size-banner-title: 40px;
     --font-size-banner-text: 20px;
     --font-size-used-app-title: 18px;
     --font-size-used-app-text: 20px;
@@ -143,6 +145,10 @@
     color: var(--text-primary);
     min-height: 100vh;
     overflow-x: hidden;
+  }
+
+  .header-section{
+    margin-bottom: 40px;
   }
   
   .section-wrapper {
@@ -271,6 +277,8 @@
   /* slider-section */
   .slider-section-wrapper {
     background: linear-gradient(to right, var(--slider-section-bg-start), var(--slider-section-bg-end));
+    border-radius: 60px;
+    margin-bottom: 5rem;
   }
   
   .earnings-calculator {
@@ -324,12 +332,14 @@
   
   .title {
     font-size: var(--font-size-2xl);
+    color: var(--bottom-nav-text);
     margin-bottom: 0.5rem;
     font-weight: 500;
   }
   
   .subtitle {
     font-size: var(--font-size-lg);
+    color: var(--bottom-nav-text);
     font-weight: 300;
     opacity: 0.8;
   }
@@ -1092,8 +1102,8 @@
   
   .reg-btn {
     position: absolute;
-    right: 41.5rem;
-    top: 9.39rem;
+    right: 40.5rem;
+    top: 9.79rem;
     padding: 1rem 2rem;
     background-color: var(--text-primary);
     text-transform: uppercase;
@@ -1399,7 +1409,7 @@
   }
   
   .section-heading h2 {
-    color: var(--quick-easy-text-color);
+    color: var(--quick-easy-text-title-color);
     font-size: var(--font-size-quick-easy-title);
     font-weight: 500;
     letter-spacing: 1px;
@@ -1458,16 +1468,17 @@
   }
   
   .icon-2 i {
-    color: var(--step-border-color);
+    color: var(--step-text-color);
     background: var(--step-icon-bg);
     padding: 30px;
     border-radius: 30%;
+    font-size: 28px;
   }
   
   .get-started-btn {
     display: flex;
     justify-content: center;
-    margin-top: 96px;
+    margin-top: 84px;
     margin-bottom: 20px;
   }
   
@@ -1496,10 +1507,10 @@
     border-radius: 100px;
     position: absolute;
     top: 96.7%;
-    left: 44%;
+    left: 43%;
     right: -12px;
     transform: translate(-0.52em, 0.52em);
-    width: 15%;
+    width: 17%;
     height: 6.5%;
   }
   
