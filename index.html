@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Collably</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+   
     <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css"
@@ -35,7 +35,7 @@
                             <i class="fab fa-youtube ms-2" aria-hidden="true"></i>
                         </a>
                     <a href="#">
-                        <i class="fa-solid fa-x"></i>
+                        <i class="fa-solid fa-x ms-2"></i>
                     </a>
                     <a href="#">
                         <i class="fab fa-facebook-f ms-2" aria-hidden="true"></i>
@@ -56,24 +56,29 @@
         
                 <hr class="styled-line">
 
-        <div class="navbar container1 content">
-           <div class="brand-icon">
-             <a href="">
-                <img src="images/logo.png" alt="logo">
-             </a>
-            </div>
-            <div class="nav-items">
-                <a href="index.html">Creators</a>
-                <a href="brand.html">Brands</a>
-                <a href="shopper.html">Shop</a>
-                <a href="form.html">Contact</a>
-            </div>
-            <div class="navbar-button">
-                 <a href="#">
-                    <span class="span-button">Sign Up For Free</span>
-                 </a>
-            </div>
-        </div>
+                <div class="navbar container1 content">
+                  <div class="hamburger" id="hamburger">
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                  </div>
+                  <div class="brand-icon">
+                      <a href="">
+                          <img src="images/logo.png" alt="logo">
+                      </a>
+                  </div>
+                  <div class="navbar-button">
+                      <a href="#">
+                          <span class="span-button">Sign Up For Free</span>
+                      </a>
+                  </div>
+              </div>
+              <div class="nav-items" id="nav-items">
+                  <a href="index.html">Creators</a>
+                  <a href="brand.html">Brands</a>
+                  <a href="shopper.html">Shop</a>
+                  <a href="form.html">Contact</a>
+              </div>
    
         
     <section class="hero-section">
@@ -117,9 +122,10 @@
                   </li>
                 </ul>
                 <h3>That ‘One App’ for Creator Economy</h3>
-                <pre>
-                  Collably makes the creator life simpler, 
-                  smarter, and more rewarding.
+                <pre >
+                  Collably makes the creator
+                  life simpler, smarter,
+                  and more rewarding.
                 </pre>
               </div>
         
@@ -650,9 +656,9 @@
     <p>Got questions? We've got answers!</p>
     
     <div class="dropdown">
-        <button onclick="toggleDropdown('q1', 'arrow1')">
+        <button class="flx" onclick="toggleDropdown('q1', 'arrow1')">
             How does the Collably Creator payout process work?
-            <i id="arrow1" class="fa-solid fa-arrow-up arrow"></i>
+            <i id="arrow1" class="fa-solid fa-chevron-down arrow"></i>
         </button>
         <div id="q1" class="dropdown-content">
             <p>Creator payout in a month will include all the commissions that get confirmed by the brand in that month and any earnings via rewards and referral program. Payments are processed on the last day of the month and will be in your bank account shortly after.</p>
@@ -660,9 +666,9 @@
     </div>
     
     <div class="dropdown">
-        <button onclick="toggleDropdown('q2', 'arrow2')">
+        <button class="flx" onclick="toggleDropdown('q2', 'arrow2')">
             How does Collably help Creators grow?
-            <i id="arrow2" class="fa-solid fa-arrow-up arrow"></i>
+            <i id="arrow2" class="fa-solid fa-chevron-down arrow"></i>
         </button>
         <div id="q2" class="dropdown-content">
             <p>Struggling with creative block or unsure about profitable content? The Collably Creator Success Team guides you through content strategies to fuel your growth and maximise earnings.</p>
@@ -670,9 +676,9 @@
     </div>
     
     <div class="dropdown">
-        <button onclick="toggleDropdown('q3', 'arrow3')">
+        <button class="flx" onclick="toggleDropdown('q3', 'arrow3')">
             Will Brands control my content?
-            <i id="arrow3" class="fa-solid fa-arrow-up arrow"></i>
+            <i id="arrow3" class="fa-solid fa-chevron-down arrow"></i>
         </button>
         <div id="q3" class="dropdown-content">
             <p>No deadlines or content demands. You’re the boss of your own creative journey.</p>
@@ -680,9 +686,9 @@
     </div>
     
     <div class="dropdown">
-        <button onclick="toggleDropdown('q4', 'arrow4')">
+        <button class="flx" onclick="toggleDropdown('q4', 'arrow4')">
             Do Collably Creators receive exclusive Brand information?
-            <i id="arrow4" class="fa-solid fa-arrow-up arrow"></i>
+            <i id="arrow4" class="fa-solid fa-chevron-down arrow"></i>
         </button>
         <div id="q4" class="dropdown-content">
             <p>Yes, get early alerts on upcoming sales, topical days & more to plan your content better and enhance your revenue.</p>
@@ -690,9 +696,9 @@
     </div>
     
     <div class="dropdown">
-        <button onclick="toggleDropdown('q5', 'arrow5')">
+        <button class="flx" onclick="toggleDropdown('q5', 'arrow5')">
             Can Collably's brand commissions surpass my current collab earnings?
-            <i id="arrow5" class="fa-solid fa-arrow-up arrow"></i>
+            <i id="arrow5" class="fa-solid fa-chevron-down arrow"></i>
         </button>
         <div id="q5" class="dropdown-content">
             <p>Yes, Collably offers a stable, recurring income stream that can <br> complement and even surpass your existing brand collaborations.</p>
@@ -767,6 +773,7 @@
                     </form>
                   </div>
                 </div>
+                <div class="f-1">
                 <div class="footer-header-2">
                     <div class="links">
                     <h3>Help & Company</h3>
@@ -815,6 +822,7 @@
                         </li>
                        </ul>
                 </div>
+              </div>
             </div>   
         </div>
     </div>
@@ -822,12 +830,14 @@
     <div class="bottom-footer">
         <div class="container4">
             <div class="footer-item">
+              <div class="f-2">
                 <div class="left-text">
                     <p>© Copyrights 2022. All rights reserved.</p>
                 </div>
                 <div class="right-text">
                      <p><a href>Terms & Conditions</p></a>
                 </div>
+            </div>
             </div>
         </div>
     </div>

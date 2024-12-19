@@ -1,5 +1,23 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+    const hamburger = document.getElementById('hamburger');
+    const navItems = document.getElementById('nav-items');
+
+    hamburger.addEventListener('click', function(event) {
+        event.stopPropagation();
+        navItems.classList.toggle('active');
+        hamburger.classList.toggle('active');
+    });
+
+    document.addEventListener('click', function(event) {
+        const isClickInsideNav = navItems.contains(event.target);
+        const isClickInsideHamburger = hamburger.contains(event.target);
+
+        if (!isClickInsideNav && !isClickInsideHamburger && navItems.classList.contains('active')) {
+            navItems.classList.remove('active');
+            hamburger.classList.remove('active');
+        }
+    });
         /* Scroll Section Wrapper */
         const brands = document.querySelectorAll('.brand');
         
@@ -105,7 +123,6 @@ document.addEventListener('DOMContentLoaded', () => {
         followersSlider.addEventListener('input', handleSliderInput);
         contentSlider.addEventListener('input', handleSliderInput);
     
-        // Initialize sliders
         updateSlider(followersSlider, followersThumb, followersValue, followersTrack);
         updateSlider(contentSlider, contentThumb, contentValue, contentTrack);
     
@@ -119,13 +136,11 @@ document.addEventListener('DOMContentLoaded', () => {
             const totalItems = items.length;
             let currentIndex = 0;
           
-            // Clone items for smooth infinite rotation
             items.forEach(item => {
               const clone = item.cloneNode(true);
               track.appendChild(clone);
             });
           
-            // Set initial position
             track.style.transform = 'translateX(0)';
           
             function rotateItems() {
@@ -134,22 +149,20 @@ document.addEventListener('DOMContentLoaded', () => {
               track.style.transition = 'transform 0.5s ease';
               track.style.transform = `translateX(${translateX}px)`;
           
-              // Reset position if we've moved past all original items
               if (currentIndex >= totalItems) {
                 setTimeout(() => {
                   track.style.transition = 'none';
                   currentIndex = 0;
                   track.style.transform = 'translateX(0)';
-                }, 500); // Wait for transition to finish
+                }, 500); 
               }
             }
           
             function startRotation() {
               rotateItems();
-              setTimeout(startRotation, 3500); // 3 seconds pause + 0.5 seconds for transition
+              setTimeout(startRotation, 3500); 
             }
           
-            // Start the rotation after a short delay
             setTimeout(startRotation, 1000);
     
     
@@ -166,13 +179,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 const totalItems1 = imageItems.length;
                 let currentImageIndex = 0;
               
-                // Clone items for smooth infinite rotation
                 imageItems.forEach(item => {
                   const clone = item.cloneNode(true);
                   imageTrack.appendChild(clone);
                 });
               
-                // Set initial position
+            
                 imageTrack.style.transform = 'translateX(0)';
               
                 function rotateImages() {
@@ -181,22 +193,21 @@ document.addEventListener('DOMContentLoaded', () => {
                   imageTrack.style.transition = 'transform 0.5s ease';
                   imageTrack.style.transform = `translateX(${translateX}px)`;
               
-                  // Reset position if we've moved past all original items
+                  
                   if (currentImageIndex >= totalItems1) {
                     setTimeout(() => {
                       imageTrack.style.transition = 'none';
                       currentImageIndex = 0;
                       imageTrack.style.transform = 'translateX(0)';
-                    }, 500); // Wait for transition to finish
+                    }, 500); 
                   }
                 }
               
                 function startImageRotation() {
                   rotateImages();
-                  setTimeout(startImageRotation, 3500); // 3 seconds pause + 0.5 seconds for transition
+                  setTimeout(startImageRotation, 3500); 
                 }
               
-                // Start the rotation after a short delay
                 setTimeout(startImageRotation, 1000);
               
     
@@ -235,8 +246,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     const reviewBlocks = document.querySelectorAll('.review_block');
                     let currentReviewIndex = 0;
                     let isScrolling = false;
-                
-                    // Function to check if an element is in viewport
+                    
                     function isInViewport(element) {
                         const rect = element.getBoundingClientRect();
                         return (
@@ -244,45 +254,28 @@ document.addEventListener('DOMContentLoaded', () => {
                             rect.top <= (window.innerHeight || document.documentElement.clientHeight)
                         );
                     }
-                
-                    // Function to activate the next review
+                    
                     function activateNextReview() {
                         if (currentReviewIndex < reviewBlocks.length) {
                             reviewBlocks[currentReviewIndex].classList.add('active');
                             currentReviewIndex++;
-                            
-                            // If there are more reviews, scroll to the next one after a delay
-                            if (currentReviewIndex < reviewBlocks.length) {
-                                setTimeout(() => {
-                                    reviewBlocks[currentReviewIndex].scrollIntoView({ 
-                                        behavior: 'smooth',
-                                        block: 'center'
-                                    });
-                                }, 1000);
-                            }
                         }
                     }
-                
-                    // Initialize the first review
-                    activateNextReview();
-                
-                    // Handle scroll events
+                    
                     window.addEventListener('scroll', () => {
                         if (!isScrolling) {
                             window.requestAnimationFrame(() => {
-                                if (currentReviewIndex < reviewBlocks.length) {
-                                    const currentReview = reviewBlocks[currentReviewIndex];
-                                    if (isInViewport(currentReview)) {
+                                reviewBlocks.forEach((review, index) => {
+                                    if (isInViewport(review) && index >= currentReviewIndex) {
                                         activateNextReview();
                                     }
-                                }
+                                });
                                 isScrolling = false;
                             });
                             isScrolling = true;
                         }
                     });
-                
-                    // Handle click events on reviews
+                    
                     reviewBlocks.forEach((block, index) => {
                         block.addEventListener('click', () => {
                             if (index <= currentReviewIndex) {
@@ -290,7 +283,6 @@ document.addEventListener('DOMContentLoaded', () => {
                             }
                         });
                     });
-    
    
     
 
@@ -481,5 +473,7 @@ document.addEventListener('keydown', (e) => {
 });
 
 storyVideo.addEventListener('ended', nextMedia);
+
+
 
 
