@@ -280,6 +280,12 @@ body {
   font-weight: bold;
 }
 
+.flx{
+  display: flex;
+  justify-content: space-between;
+}
+
+
 .button-icons img {
   width: 24px;
   height: 24px;
@@ -948,7 +954,7 @@ i {
 }
 
 .container3 {
-  width: 97%;
+  width: 70%;
   margin: 50px auto;
   background-color: var(--dropdown-bg);
   padding: 20px;
