@@ -1,5 +1,37 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+    const carousel = document.querySelector('.carousel');
+const slides = document.querySelectorAll('.video-slide');
+let currentIndexReels = 0;
+
+const firstClone = slides[0].cloneNode(true);
+const lastClone = slides[slides.length - 1].cloneNode(true);
+
+carousel.appendChild(firstClone);
+carousel.insertBefore(lastClone, slides[0]);
+
+carousel.style.transform = `translateX(-${100 / (slides.length + 2)}%)`;
+
+function nextSlide() {
+    currentIndexReels++;
+    const adjustmentFactor = 1.1; 
+    carousel.style.transition = 'transform 0.5s ease';
+    carousel.style.transform = `translateX(-${(currentIndexReels + 1) * 100 / (slides.length + 2) * adjustmentFactor}%)`;
+
+    if (currentIndexReels === slides.length) {
+        setTimeout(() => {
+            carousel.style.transition = 'none';
+            currentIndexReels = 0;
+            carousel.style.transform = `translateX(-${100 / (slides.length + 2)}%)`;
+        }, 500);
+    }
+}
+slides.forEach(slide => {
+    const video = slide.querySelector('video');
+    video.play();
+});
+setInterval(nextSlide, 2000);
+
         /* Scroll Section Wrapper */
         const brands = document.querySelectorAll('.brand');
         

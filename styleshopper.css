@@ -3,6 +3,10 @@
   --primary-purple: #ff0055e0;
   --primary-blue: #5454ff;
   --primary-cyan: #54d4ff;
+  --botton-bg: #002a5e;
+  --bg-gradient: radial-gradient(circle at 10% 0%,#e61f93 0%, rgba(255, 165, 0, 0) 50%),
+  radial-gradient(circle at 90% 90%, #fc7f86 0%, rgba(255, 192, 203, 0) 50%),
+  linear-gradient(to right, #f5e6d3, #fff5f5, #ffffff);
 }
 
 * {
@@ -14,7 +18,7 @@
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, sans-serif;
-  background-color: #ffffff;
+  background-color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -26,8 +30,8 @@ body {
   max-width: 450px;
   height: 100vh;
   overflow-y: auto;
-  background-color: white;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  background: var(--bg-gradient);
+   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   position: relative;
   overflow-y: auto;
   scrollbar-width: none;
@@ -253,7 +257,7 @@ main {
 .section-title {
   margin-bottom: 0.8rem;
   font-weight: 700;
-  color: #ff0055e0;
+  color: #0000ff;
   font-size: 1.5rem;
 }
 
@@ -331,7 +335,7 @@ main {
   align-items: center;
   justify-content: center;
   border-radius: 1rem;
-  background-color: #5a2ebf;
+  background-color: var(--botton-bg);
   padding: 0 0.25rem;
   cursor: pointer;
   border: none;
@@ -603,4 +607,98 @@ main {
 .icon img {
   border-radius: 50%;
   height: auto;
+}
+
+.creator{
+  display: flex;
+  gap: .8rem;
+ 
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.creator img{
+  border-radius: 50%;
+  display: flex;
+}
+
+.img-border{
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 50%;
+  padding: 0.1rem;
+}
+
+.img-border img{
+  height: 85px;
+  width: 85px;
+}
+
+.img-text-2{
+  font-size: 0.75rem;
+  line-height: 1rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  text-align: center;
+}
+
+.carousel-container {
+  width: 100%;
+  max-width: 1200px;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.video-slide {
+  flex: 0 0 100%;
+  max-width: 200px;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+video {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .carousel-container {
+      max-width: 90%;
+  }
+}
+
+h4{
+  font-size: 2rem !important;
+}
+
+.h4{
+  text-align: center;
+}
+
+.sub-heading{
+  margin-bottom: 1rem;
+  color: blue;
+}
+
+.img-border-1{
+  border-radius: 40%;
+  padding-top: 20px;
+}
+
+.img-border-1 img{
+  height: 90px;
+  width: 90px;
+  border-radius: 20%;
+}
+
+.creator-1{
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 }
